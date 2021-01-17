@@ -1,0 +1,9 @@
+C:\Users\Ani\source\repos\JobManagement.Models\obj\Debug\netcoreapp2.2\JobManagement.Models.csproj.CoreCompileInputs.cache
+C:\Users\Ani\source\repos\JobManagement.Models\obj\Debug\netcoreapp2.2\JobManagement.Models.AssemblyInfoInputs.cache
+C:\Users\Ani\source\repos\JobManagement.Models\obj\Debug\netcoreapp2.2\JobManagement.Models.AssemblyInfo.cs
+C:\Users\Ani\source\repos\JobManagement.Models\bin\Debug\netcoreapp2.2\JobManagement.Models.deps.json
+C:\Users\Ani\source\repos\JobManagement.Models\bin\Debug\netcoreapp2.2\JobManagement.Models.dll
+C:\Users\Ani\source\repos\JobManagement.Models\bin\Debug\netcoreapp2.2\JobManagement.Models.pdb
+C:\Users\Ani\source\repos\JobManagement.Models\obj\Debug\netcoreapp2.2\JobManagement.Models.dll
+C:\Users\Ani\source\repos\JobManagement.Models\obj\Debug\netcoreapp2.2\JobManagement.Models.pdb
+C:\Users\Ani\source\repos\JobManagement.Models\obj\Debug\netcoreapp2.2\JobManagement.Models.csprojAssemblyReference.cache

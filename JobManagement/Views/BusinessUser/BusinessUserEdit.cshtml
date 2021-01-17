@@ -1,0 +1,85 @@
+﻿@using JobManagement.Resources;
+@model JobManagement.Models.BusinessUser.UpdateBusinessUserViewModel
+
+<div class="container">
+    <div class="col-md-12">
+        <p class="txt-title-big text-align-center">@AccountResource.ProfileRedaction</p>
+
+        <form asp-controller="BusinessUser" asp-action="BusinessUserEdit" enctype="multipart/form-data" class="smart-form profile-form-modify">
+            <fieldset>
+                <section>
+                    <label asp-for="CompanyName" class="label txt-title-small"></label>
+                    <label class="input">
+                        <input asp-for="CompanyName" class="txt-normal" type="text" maxlength="50">
+                        <span class="text-danger txt-small" asp-validation-for="CompanyName"></span>
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="NBusinessSectorId" class="label txt-title-small"></label>
+                    <label class="select">
+                        <select asp-for="NBusinessSectorId" class="padding-bottom-0 padding-left-10"
+                                asp-items="@Model.BusinessSector"></select> <i></i>
+                        <span class="text-danger txt-small" asp-validation-for="NBusinessSectorId"></span>
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <section>
+                        <label asp-for="NCountryId" class="label txt-title-small"></label>
+                        <label class="select">
+                            <select asp-for="NCountryId" class="padding-bottom-0 padding-left-10"
+                                    asp-items="@Model.Countries"></select> <i></i>
+                            <span class="text-danger txt-small" asp-validation-for="Countries"></span>
+                        </label>
+                    </section>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="NTownId" class="label txt-title-small"></label>
+                    <label class="select">
+                        <select asp-for="NTownId" class="padding-bottom-0 padding-left-10"
+                                asp-items="@Model.Towns"></select> <i></i>
+                        <span class="text-danger txt-small" asp-validation-for="Towns"></span>
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="Email" class="label txt-title-small"></label>
+                    <label class="input">
+                        <input asp-for="Email" class="txt-normal disabled-inputs" type="text" maxlength="150" readonly="readonly">
+                        <span class="text-danger txt-small" asp-validation-for="Email"></span>
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="ProfileImage" class="label txt-title-small"></label>
+                    <label for="file" class="input input-file">
+                        <div class="button">
+                            <input asp-for="ProfileImage" type="file" onchange="this.parentNode.nextSibling.value = this.value">@AccountResource.Choise
+                        </div><input class="txt-normal" type="text" placeholder="@AccountResource.ChoiseFile" readonly="">
+                    </label>
+                </section>
+            </fieldset>
+
+            <fieldset>
+                <section>
+                    <label asp-for="AdditionalDescription" class="label txt-title-small"></label>
+                    <textarea id="summernote" asp-for="AdditionalDescription"></textarea>
+                </section>
+            </fieldset>
+
+            <hr class="horizontal-line">
+            <input class="btn btn-primary pull-right btn-form-submit" value="@AccountResource.Save" type="submit" />
+
+        </form>
+        <div class="empty-div-20px"></div>
+    </div>
+</div>
+
+<script src="~/js/CustomsScripts/Account/summernote-load.js"></script>

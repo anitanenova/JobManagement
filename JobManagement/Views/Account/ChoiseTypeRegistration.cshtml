@@ -1,0 +1,37 @@
+@using JobManagement.Resources;
+
+<div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hidden-xs hidden-sm">
+        <h1 class="login-header-big txt-log-page-title text-center">@AccountResource.NotAccount</h1>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 padding-20">
+                <div class="col-md-6 col-md-offset-3">
+                    <img class="log-page-img" src="~/img/adminprofile111111.jpeg" />
+                </div>
+                <div class="col-md-12">
+                    <p class="log-page-txt">
+                        @AccountResource.UserProfileDescriptionMsg
+                    </p>
+                    <div class="note">
+                        <a class="type-profile" asp-controller="Account" asp-action="UserRegister">@AccountResource.UserProfile</a>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 padding-20">
+                <div class="col-md-6 col-md-offset-3">
+                    <img class="log-page-img" src="~/img/job9.png" />
+                </div>
+                <div class="col-md-12">
+                    <p class="log-page-txt">
+                        @AccountResource.BusinessUserProfileDescriptionMsg
+                    </p>
+                    <div class="note">
+                        <a class="type-profile" asp-controller="Account" asp-action="BusinessRegister">@AccountResource.businessProfile</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

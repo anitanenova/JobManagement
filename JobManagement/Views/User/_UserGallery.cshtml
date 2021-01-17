@@ -1,0 +1,39 @@
+﻿@model JobManagement.Models.User.UserGalleryViewModel
+
+<div class="row">
+
+    <!-- SuperBox -->
+    <div class="superbox col-sm-12">
+        <ul id="galleryBox">
+            @{ await Html.RenderPartialAsync("_UserGalleryImages", Model); }
+        </ul>
+    
+        <div class="superbox-float"></div>
+    </div>
+    <!-- /SuperBox -->
+
+    <div class="superbox-show" style="display: none; height: 300px;"></div>
+</div>
+
+
+<script>
+
+    //galleryImages
+    var $imagesContainer = $("#galleryBox");
+    const userBaseUrl = '/User';
+
+    var skip = 0;
+    var take = 15;
+
+
+    /////////////////InfinityScroll
+    
+    window.setInfinityScroll({
+        take: take,
+        url: "/User/UserGalleryImages",
+        scrolledEl: window,
+        ulElSelector: $imagesContainer,
+        isWindowScroll: true
+        
+    });
+</script>

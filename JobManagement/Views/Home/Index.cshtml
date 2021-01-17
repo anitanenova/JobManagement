@@ -1,0 +1,286 @@
+﻿@using JobManagement.Resources;
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//geodata.solutions/includes/countrystatecity.js"></script>
+<div class="col-md-12">
+
+    <select name="country" class="countries order-alpha" id="countryId">
+        <option value="">Select Country</option>
+    </select>
+    <select name="state" class="states order-alpha" id="stateId">
+        <option value="">Select State</option>
+    </select>
+    <select name="city" class="cities order-alpha" id="cityId">
+        <option value="">Select City</option>
+    </select>
+
+    <p class="txt-title-big">@AccountResource.ProfileRedaction</p>
+
+    <form class="smart-form">
+        <fieldset>
+            <section>
+                <label class="label">Default text input with maxlength</label>
+                <label class="input">
+                    <input type="text" maxlength="10">
+                </label>
+                <div class="note">
+                    <strong>Maxlength</strong> is automatically added via the "maxlength='#'" attribute
+                </div>
+            </section>
+        </fieldset>
+
+        <section>
+            <label class="label">File input</label>
+            <label for="file" class="input input-file">
+                <div class="button">
+                    <input type="file" name="file" onchange="this.parentNode.nextSibling.value = this.value">Browse
+                </div><input type="text" placeholder="Include some files" readonly="">
+            </label>
+        </section>
+
+        <fieldset>
+            <section>
+                <label class="label">Select default</label>
+                <label class="select">
+                    <select>
+                        <option value="0">Choose name</option>
+                        <option value="1">Alexandra</option>
+                        <option value="2">Alice</option>
+                        <option value="3">Anastasia</option>
+                        <option value="4">Avelina</option>
+                    </select> <i></i>
+                </label>
+            </section>
+        </fieldset>
+        <fieldset>
+            <section>
+                <label class="label">Multiple select</label>
+                <label class="select select-multiple">
+                    <select multiple="" class="custom-scroll">
+                        <option value="1">Alexandra</option>
+                        <option value="2">Alice</option>
+                        <option value="3">Anastasia</option>
+                        <option value="4">Avelina</option>
+                        <option value="5">Basilia</option>
+                        <option value="6">Beatrice</option>
+                        <option value="7">Cassandra</option>
+                        <option value="8">Clemencia</option>
+                        <option value="9">Desiderata</option>
+                    </select>
+                </label>
+                <div class="note">
+                    <strong>Note:</strong> hold down the ctrl/cmd button to select multiple options.
+                </div>
+            </section>
+        </fieldset>
+        <fieldset>
+            <section>
+                <label class="label">Columned checkboxes</label>
+                <div class="row">
+                    <div class="col col-4">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" checked="checked">
+                            <i></i>Alexandra
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox">
+                            <i></i>Alice
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox">
+                            <i></i>Anastasia
+                        </label>
+                    </div>
+                    <div class="col col-4">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox">
+                            <i></i>Avelina
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox">
+                            <i></i>Basilia
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox">
+                            <i></i>Beatrice
+                        </label>
+                    </div>
+                    <div class="col col-4">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox">
+                            <i></i>Cassandra
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox">
+                            <i></i>Clemencia
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox">
+                            <i></i>Desiderata
+                        </label>
+                    </div>
+                </div>
+            </section>
+        </fieldset>
+        <fieldset>
+            <section>
+                <label class="label">Inline checkboxes</label>
+                <div class="inline-group">
+                    <label class="checkbox">
+                        <input type="checkbox" name="checkbox-inline" checked="checked">
+                        <i></i>Alexandra
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="checkbox-inline">
+                        <i></i>Alice
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="checkbox-inline">
+                        <i></i>Anastasia
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="checkbox-inline">
+                        <i></i>Avelina
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="checkbox-inline">
+                        <i></i>Beatrice
+                    </label>
+                </div>
+            </section>
+        </fieldset>
+    </form>
+
+
+
+    <div class="col-sm-12 col-md-12 col-lg-6">
+        <!-- well -->
+        <div class="well">
+            <h3>Bootstrap Modal</h3>
+            <h5>Static Example</h5>
+            <p>
+                A rendered modal with header, body, and set of actions in the footer.
+            </p>
+
+            <div class="modal-dialog demo-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            ×
+                        </button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            One fine body…
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            Save changes
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+
+            <h5>Live Demo</h5>
+            <p>
+                Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.
+            </p>
+
+            <a href="/ajax/modal-content/model-content-1.html" data-toggle="modal" data-target="#remoteModal" class="btn btn-primary btn-lg">
+                Launch remote modal
+            </a>
+
+            <!-- Dynamic Modal -->
+            <div class="modal fade" id="remoteModal" tabindex="-1" role="dialog" aria-labelledby="remoteModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- content will be filled here from "ajax/modal-content/model-content-1.html" -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal -->
+
+            <h3 class="hidden-mobile">Options</h3>
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-striped hidden-mobile">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>type</th>
+                            <th>default</th>
+                            <th>description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>backdrop</td>
+                            <td>
+                                boolean or the string
+                                <code>
+                                    'static'
+                                </code>
+                            </td>
+                            <td>true</td>
+                            <td>
+                                Includes a modal-backdrop element. Alternatively, specify
+                                <code>
+                                    static
+                                </code> for a backdrop which doesn't close the modal on click.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>keyboard</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Closes the modal when escape key is pressed</td>
+                        </tr>
+                        <tr>
+                            <td>show</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Shows the modal when initialized.</td>
+                        </tr>
+                        <tr>
+                            <td>remote</td>
+                            <td>path</td>
+                            <td>false</td>
+                            <td>
+                                <p>
+                                    If a remote URL is provided, content will be loaded via jQuery's
+                                    <code>
+                                        load
+                                    </code>
+                                    method and injected into the root of the modal element. If you're using the data-api, you may alternatively use the
+                                    <code>
+                                        href
+                                    </code>
+                                    attribute to specify the remote source. An example of this is shown below:
+                                </p>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <p class="alert alert-success">The traditional bootstrap modal will work a bit different in the SmartAdmin AJAX version:</p>
+                                <code style="white-space: normal;">&lt;a data-target="#modal" data-toggle="modal" href="remote.html"&gt; ... &lt;/a&gt;</code>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <!-- end well-->
+
+    </div>
+
+</div>
+

@@ -1,0 +1,355 @@
+﻿@using JobManagement.Models.User
+@using JobManagement.Resources;
+@model JobManagement.Models.User.UpdateUserViewModel
+
+
+<link href="~/css/datetimepicker.css" rel="stylesheet" />
+<link href="~/css/upload-image-styles.css" rel="stylesheet" />
+<style>
+
+
+    .disabled:hover {
+        cursor: not-allowed;
+    }
+
+</style>
+<div class="container">
+    <div class="col-md-12">
+        <p class="txt-title-big text-align-center">@AccountResource.ProfileRedaction</p>
+
+        <form asp-controller="User" asp-action="UpdateUser" method="post" enctype="multipart/form-data" class="smart-form profile-form-modify">
+            <fieldset>
+                <section>
+                    <label asp-for="Name" class="label txt-title-small"></label>
+                    <label class="input">
+                        <input asp-for="Name" class="txt-normal" type="text" maxlength="50">
+                        <span class="text-danger txt-small" asp-validation-for="Name"></span>
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="LastName" class="label txt-title-small"></label>
+                    <label class="input">
+                        <input asp-for="LastName" class="txt-normal" type="text" maxlength="50">
+                        <span class="text-danger txt-small" asp-validation-for="LastName"></span>
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="NGenderId" class="label txt-title-small"></label>
+                    <label class="select">
+                        <select asp-for="NGenderId" class="padding-bottom-0 padding-left-10"
+                                asp-items="@Model.Genders"></select> <i></i>
+                        <span class="text-danger txt-small" asp-validation-for="Genders"></span>
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="NCountryId" class="label txt-title-small"></label>
+                    <label class="select">
+                        <select asp-for="NCountryId" class="padding-bottom-0 padding-left-10"
+                                asp-items="@Model.Countries"></select> <i></i>
+                        <span class="text-danger txt-small" asp-validation-for="Countries"></span>
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="NTownId" class="label txt-title-small"></label>
+                    <label class="select">
+                        <select asp-for="NTownId" class="padding-bottom-0 padding-left-10"
+                                asp-items="@Model.Towns"></select> <i></i>
+                        <span class="text-danger txt-small" asp-validation-for="Towns"></span>
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="BdayDate" class="label txt-title-small"></label>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class='input-group date bday-date'>
+                                <input type='text' asp-for="BdayDate" class="form-control date-text-edit bday-date"/>
+                                <span class="input-group-addon calendar-image">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="Email" class="label txt-title-small"></label>
+                    <label class="input">
+                        <input asp-for="Email" class="txt-normal disabled-inputs" type="text" maxlength="150"  readonly="readonly" />
+                        <span class="text-danger txt-small" asp-validation-for="Email"></span>
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="TelеphoneNumber" class="label txt-title-small"></label>
+                    <label class="input">
+                        <input asp-for="TelеphoneNumber" class="txt-normal" type="text" maxlength="50">
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="NEducationId" class="label txt-title-small"></label>
+                    <label class="select">
+                        <select asp-for="NEducationId" class="padding-bottom-0 padding-left-10"
+                                asp-items="@Model.Educations"></select> <i></i>
+                    </label>
+                    <div class="note">
+                        Посочете <strong>най-високата</strong> степен, която притежавате.
+                    </div>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="Categories" class="label txt-title-small">@AccountResource.Categories</label>
+                    <div class="col-md-12 custom-scroll choise-box">
+
+
+                        @for (var i = 0; i < Model.Categories.Count; i++)
+                        {
+
+                            <div class="col col-4 choise-box-el-padding">
+                                <label class="checkbox">
+                                    <input asp-for="@Model.Categories[i].IsSelected" type="checkbox">
+
+                                    <i></i>@Model.Categories[i].Name
+                                </label>
+                            </div>
+                            <input type="hidden" asp-for="@Model.Categories[i].Id" />
+                            <input type="hidden" asp-for="@Model.Categories[i].Name" />
+                        }
+
+                    </div>
+                    <div class="note">
+                        Посочете сферата, в която <strong>бихте искали да работите</strong>.
+                    </div>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="JobType" class="label txt-title-small">@AccountResource.JobType</label>
+                    <div class="col-md-12 custom-scroll choise-box">
+
+
+                        @for (var i = 0; i < Model.JobTypes.Count; i++)
+                        {
+
+                            <div class="col col-4 choise-box-el-padding">
+                                <label class="checkbox">
+                                    <input asp-for="@Model.JobTypes[i].IsSelected" type="checkbox">
+
+                                    <i></i>@Model.JobTypes[i].Name
+                                </label>
+                            </div>
+                            <input type="hidden" asp-for="@Model.JobTypes[i].Id" />
+                            <input type="hidden" asp-for="@Model.JobTypes[i].Name" />
+                        }
+
+                    </div>
+                    <div class="note">
+                        Посочете вида работа, която <strong>бихте искали да започнете работа</strong>.
+                    </div>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="Skills" class="label txt-title-small">@AccountResource.Skills</label>
+                    <div class="col-md-12 custom-scroll choise-box">
+
+
+                        @for (var i = 0; i < Model.Skills.Count; i++)
+                        {
+
+                            <div class="col col-4 choise-box-el-padding">
+                                <label class="checkbox">
+                                    <input asp-for="@Model.Skills[i].IsSelected" type="checkbox">
+
+                                    <i></i>@Model.Skills[i].Name
+                                </label>
+                            </div>
+                            <input type="hidden" asp-for="@Model.Skills[i].Id" />
+                            <input type="hidden" asp-for="@Model.Skills[i].Name" />
+                        }
+
+                    </div>
+                    <div class="note">
+                        Посочете уменията, които <strong>смятате, че притежавате</strong>.
+                    </div>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label asp-for="HealthStatuses" class="label txt-title-small">@AccountResource.HealthStatus</label>
+                    <div class="col-md-12 custom-scroll choise-box">
+
+
+                        @for (var i = 0; i < Model.HealthStatuses.Count; i++)
+                        {
+
+                            <div class="col col-4 choise-box-el-padding">
+                                <label class="checkbox">
+                                    <input asp-for="@Model.HealthStatuses[i].IsSelected" type="checkbox">
+
+                                    <i></i>@Model.HealthStatuses[i].Name
+                                </label>
+                            </div>
+                            <input type="hidden" asp-for="@Model.HealthStatuses[i].Id" />
+                            <input type="hidden" asp-for="@Model.HealthStatuses[i].Name" />
+                        }
+
+                    </div>
+                    <div class="note">
+                        Посочете вашият <strong>здравен статус</strong>.
+                    </div>
+                </section>
+            </fieldset>
+
+
+            <fieldset>
+                <section>
+                    <label asp-for="ProfileImage" class="label txt-title-small"></label>
+                    <label for="file" class="input input-file">
+                        <div class="button">
+                            <input asp-for="ProfileImage" type="file" onchange="this.parentNode.nextSibling.value = this.value">@AccountResource.Choise
+                        </div><input class="txt-normal" type="text" placeholder="@AccountResource.ChoiseFile" readonly="">
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <label class="label txt-title-small">@AccountResource.GalleryImagesBox</label>
+                    <div class="col-md-12">
+                        <ul id="galleryImagesBox" class="custom-scroll preview-choises-images-zone"></ul>
+                    </div>
+                    <div class="note">
+                        Снимки <strong>качени</strong> в моята галерия.
+                    </div>
+                </section>
+            </fieldset>
+            <fieldset class="form-group">
+                <section>
+                    <label asp-for="GalleryImages" class="label txt-title-small col-md-4"></label>
+                    <a class="txt-title-small txt-color-blue pull-right" href="javascript:void(0)" onclick="$('#galleryImages').click()">@AccountResource.ChoiseImage</a>
+                    <input type="file" asp-for="GalleryImages" id="galleryImages" style="display: none;" multiple="multiple">
+
+                    <div class="col-md-12">
+                        <div class="preview-images-zone"></div>
+                    </div>
+                    <div class="col-md-12 note">
+                        Добавете снимка/снимки <strong>във вашата галерия</strong>.
+                    </div>
+                </section>
+            </fieldset>
+
+            @*<fieldset>
+                    <section>
+                        <label asp-for="UserVideo" class="label txt-title-small"></label>
+                        <label for="file" class="input input-file">
+                            <div class="button">
+                                <input asp-for="UserVideo" type="file" name="file" onchange="this.parentNode.nextSibling.value = this.value">@AccountResource.Choise
+                            </div><input class="txt-normal" type="text" placeholder="@AccountResource.ChoiseFile" readonly="">
+                        </label>
+                    </section>
+                </fieldset>*@
+
+            <fieldset>
+                <section>
+                    <label asp-for="AdditionalDescription" class="label txt-title-small"></label>
+                    <textarea id="summernote" asp-for="AdditionalDescription"></textarea>
+                    <div class="col-md-12 note">
+                       Попълнете това поле, в случай че желаете да предоставите <strong> допълнителна информация за себе си </strong> на фирмите.
+                    </div>
+                </section>
+            </fieldset>
+
+            <div class="padding-left-15 margin-bottom-10 margin-top-10">
+                <label class="checkbox" asp-for="VisibilityProfile">
+                    <input type="checkbox" name="checkbox" asp-for="VisibilityProfile">
+                    <i></i><p class="txt-title-small">@AccountResource.VisibleProfile</p>
+                </label>
+            </div>
+
+            <hr class="horizontal-line">
+            <input class="btn btn-primary pull-right btn-form-submit" value="@(AccountResource.Save)" type="submit" />
+        </form>
+        <div class="empty-div-20px"></div>
+    </div>
+
+</div>
+
+<script src="~/js/upload-image.js"></script>
+<script src="~/js/CustomsScripts/Account/summernote-load.js"></script>
+<script>
+    //galleryImages
+    var $imagesContainer = $("#galleryImagesBox");
+    var $bdayDate = $('.bday-date');
+
+
+    const userBaseUrl = '/User';
+
+    var skip = 0;
+    var take = 15;
+    
+
+    $(document).ready(function () {
+        RenderChoisesGalleryImages(skip, take);
+        
+        function RenderChoisesGalleryImages(skip, take) {
+            debugger;
+            window.showLoaderInEl($imagesContainer);
+
+            $.get(`${userBaseUrl}/GetGalleryImages`,
+                { skip, take },
+                function (html) {
+                    $imagesContainer.append(html);
+                
+                    window.hideLoaderInEl($imagesContainer);
+                });
+        }
+    });
+
+
+
+    debugger;
+    window.setInfinityScroll({
+        take: take,
+        url: "/User/UserGalleryImages",
+        scrolledEl: $imagesContainer,
+        ulElSelector: $imagesContainer,
+        isWindowScroll: false
+    });
+    var dateNow = new Date();
+    var maxDate = new Date(dateNow.setFullYear(dateNow.getFullYear() - 16));
+
+
+    var val = $("#BdayDate").val();
+
+
+    $bdayDate.datetimepicker({
+        format: 'L',
+        minDate: new Date(1920, 01, 01),
+        maxDate: maxDate,
+        date: val,
+        locale: 'bg'
+    });
+
+    $bdayDate.data("DateTimePicker").date(val);
+
+
+    $bdayDate.datetimepicker().on('dp.hide', function() {
+        $(this).blur();
+    });
+
+
+</script>

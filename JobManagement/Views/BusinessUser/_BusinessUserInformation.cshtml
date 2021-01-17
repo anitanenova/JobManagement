@@ -1,0 +1,106 @@
+﻿@using JobManagement.Resources
+@model JobManagement.Models.BusinessUser.BusinessUserInformationViewModel
+
+<div class="col-md-12">
+    <div class="col-md-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.CompanyName</p>
+        </div>
+    </div>
+    <div class="col-md-6 profil-info-right-container">
+        <div class="col-md-12">
+            <p>@Model.CompanyName</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.BusnessSector</p>
+        </div>
+    </div>
+    <div class="col-md-6 profil-info-right-container">
+        <div class="col-md-12">
+            <p>
+                @Model.NBusinessSector.Name
+
+                @if (Model.NBusinessSector == null)
+                {
+                    <text> - </text>
+                }
+            </p>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.Email</p>
+        </div>
+    </div>
+    <div class="col-md-6 profil-info-right-container">
+        <div class="col-md-12">
+            <p>@Model.Email</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.Country</p>
+        </div>
+    </div>
+    <div class="col-md-6 profil-info-right-container">
+        <div class="col-md-12">
+            <p>
+                @Model.NCountry.Name
+
+            @if (Model.NCountry == null)
+            {
+                <text> - </text>
+            }
+        </p>
+    </div>
+</div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.Town</p>
+        </div>
+    </div>
+    <div class="col-md-6 profil-info-right-container">
+        <div class="col-md-12">
+            <p>
+                @Model.NTown.Name
+
+            @if (Model.NTown == null)
+            {
+                <text> - </text>
+            }
+        </p>
+    </div>
+</div>
+</div>
+
+<div class="col-md-12 empty-div-space"></div>
+
+@if (Model.AdditionalDescription == null || Model.AdditionalDescription == "<p><br></p>")
+{
+    <div class="col-md-12 empty-div-space-20px"></div>
+}
+else
+{ <div class="col-md-12 empty-div-space"></div>
+
+    <div class="col-md-12 text-align-center">
+        <div class="col-md-6 col-md-offset-3">
+            <p>@AccountResource.AdditionalDescription</p>
+            <div class="col-md-12 additional-description-container">
+                <p>@Html.Raw(Model.AdditionalDescription)</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 empty-div-space"></div>
+}
+
+<div class="col-md-12 empty-div-space"></div>

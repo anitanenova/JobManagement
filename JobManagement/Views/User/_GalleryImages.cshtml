@@ -1,0 +1,13 @@
+﻿@model JobManagement.Models.User.UserGalleryViewModel
+
+
+@for (int i = 0; i < Model.GalleryImages.Count; i++)
+{
+    var image = Model.GalleryImages[i];
+     
+
+     <li class="preview-image preview-show-@i">
+         <div class="image-cancel" data-no="@i">x</div>
+         <div class="image-zone"><img id="pro-img-@image.Id" src="data:image/jpeg;base64,@image.Image"></div></li>
+ }
+

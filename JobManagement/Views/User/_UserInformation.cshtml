@@ -1,0 +1,273 @@
+﻿@using JobManagement.Resources
+@model JobManagement.Models.User.UserInformationViewModel
+
+<div class="col-md-12">
+    <div class="col-md-6 col-xs-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.Name</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-6 profil-info-right-container">
+        <div class="col-md-12">
+            <p>@Model.Name</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6 col-xs-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.LastName</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-6 profil-info-right-container">
+        <div class="col-md-12">
+            <p>@Model.LastName</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6 col-xs-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.Gender</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-6 profil-info-right-container">
+        <div class="col-md-12">
+            <p>
+                @Model.NGender.Name
+
+                @if (Model.NGender == null)
+                {
+                    <text> - </text>
+                }
+            </p>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+        <div class="col-md-6 col-xs-6 profil-info-left-container">
+            <div class="col-md-12">
+                <p>@AccountResource.BdayDate</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-6 profil-info-right-container">
+            <div class="col-md-12">
+                @if (Model.BdayDate != null)
+               {
+                    <p>@Model.BdayDate.Value.ToShortDateString() </p>
+               }
+            </div>
+        </div>
+    </div>
+<div class="col-md-12">
+    <div class="col-md-6 col-xs-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.Country</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-6 profil-info-right-container">
+        <div class="col-md-12">
+            <p>
+                @Model.NCountry.Name
+
+                @if (Model.NCountry == null)
+                {
+                    <text> - </text>
+                }
+            </p>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6 col-xs-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.Town</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-6 profil-info-right-container">
+        <div class="col-md-12">
+            <p>
+                @Model.NTown.Name
+
+                @if (Model.NTown == null)
+                {
+                    <text> - </text>
+                }
+            </p>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6 col-xs-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.Education</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-6 profil-info-right-container">
+        <div class="col-md-12">
+            <p>
+                @Model.NEducation.Name
+
+                @if (Model.NEducation.Name == null)
+                {
+                    <text> - </text>
+                }
+            </p>
+
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6 col-xs-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.Categories</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-6 profil-info-right-container">
+        <div class="col-md-6">
+            <p>
+                @foreach (var category in Model.Categories)
+                {
+                    @(category.Name)
+                    <text>, </text>
+                }
+                @if (Model.Categories.Count == 0)
+                {
+                    <text> - </text>
+                }
+            </p>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6 col-xs-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.Type</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-6 profil-info-right-container">
+        <div class="col-md-6">
+            <p>
+                @foreach (var jobType in Model.JobTypes)
+                {
+                    @(jobType.Name)
+                    <text>, </text>
+                }
+                @if (Model.JobTypes.Count == 0)
+                {
+                    <text> - </text>
+                }
+            </p>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6 col-xs-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.Skills</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-6 profil-info-right-container">
+        <div class="col-md-6">
+            <p>
+                @foreach (var skill in Model.Skills)
+                {
+                    @(skill.Name)
+                    <text>, </text>
+                }
+                @if (Model.Skills.Count == 0)
+                {
+                    <text> - </text>
+                }
+            </p>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6 col-xs-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.HealthStatus</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-6 profil-info-right-container">
+        <div class="col-md-6">
+            <p>
+                @foreach (var healthStatus in Model.HealthStatus)
+                {
+                    @(healthStatus.Name)
+                    <text>, </text>
+                }
+                @if (Model.HealthStatus.Count == 0)
+                {
+                    <text> - </text>
+                }
+            </p>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6 col-xs-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.TelNumber</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-6 profil-info-right-container">
+        @if (Model.TelеphoneNumber != null)
+        {
+            <div id="telephone-number" data-last="@Model.TelеphoneNumber.Substring(Model.TelеphoneNumber.Length - 4)" class="col-md-12">
+                <p>
+                    @Model.TelеphoneNumber.Substring(0, Model.TelеphoneNumber.Length - 4)
+                    <span id="show-more-for-number" class="txt-color-blueLight cursor-pointer"> виж още</span><span class="last-7-numbers"></span>
+                </p>
+            </div>
+        }
+        else
+        {
+            <div id="telephone-number"  class="col-md-12">
+                <p> - </p>
+                </div>
+        }
+
+
+            </div>
+        </div>
+<div class="col-md-12">
+    <div class="col-md-6 col-xs-6 profil-info-left-container">
+        <div class="col-md-12">
+            <p>@AccountResource.Email</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-6 profil-info-right-container">
+        <div class="col-md-12">
+            <p>@Model.Email</p>
+        </div>
+    </div>
+</div>
+
+@if (Model.AdditionalDescription == null || Model.AdditionalDescription == "<p><br></p>" )
+{
+    <div class="col-md-12 empty-div-space-20px"></div>
+}
+else
+{ <div class="col-md-12 empty-div-space"></div>
+
+    <div class="col-md-12 text-align-center">
+        <div class="col-md-6 col-md-offset-3">
+            <p>@AccountResource.AdditionalDescription</p>
+            <div class="col-md-12 additional-description-container">
+                <p>@Html.Raw(Model.AdditionalDescription)</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 empty-div-space"></div>
+}
+
+
+
+
+<script>
+    $('#telephone-number').click(function () {
+        $(this).find('.last-7-numbers').text($(this).data('last'));
+        $('#show-more-for-number').hide();
+    });
+</script>

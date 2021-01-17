@@ -1,0 +1,154 @@
+body {
+}
+
+body.smart-style-6 #content {
+    margin: auto;
+}
+
+.txt-log-page-title {
+    color: #42424a !important;
+    font-size: 24px;
+    padding-left: 7px;
+    margin-top: 0px;
+}
+
+.log-page-img {
+    width: 100%;
+}
+
+.log-page-txt {
+    text-align: justify;
+    color: #42424a;
+    font-size: 14px;
+}
+
+.padding-left-5 {
+    padding-right: 5px;
+}
+
+.padding-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.log-form-border, .register-form-border {
+    border: 1px solid #21888f !important;
+}
+
+    .log-form-border, .register-form-border header {
+        background: #5cb8bf;
+        border-bottom-color: #21888f;
+        border-bottom-style: solid;
+        margin: 0;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 18px;
+    }
+
+.client-form header {
+    background: #5cb8bf;
+    border-bottom-color: #21888f;
+    border-bottom-style: solid;
+    margin: 0;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 18px;
+}
+
+.smart-form footer {
+    background: #5cb8bf;
+    border-top: 1px solid #21888f;
+}
+.smart-form .label {
+    color: #42424a;
+}
+
+.type-profile {
+    font-size: 18px;
+}
+
+.log-form-border, .register-form-border footer {
+    background: #5cb8bf;
+    border-top: 1px solid #21888f;
+}
+
+.log-form-border, register-form-border .label {
+    color: #42424a;
+}
+
+.smart-form fieldset { background: #ffffff; }
+
+
+    #extr-page #header {
+    background: #218894 !important;
+    background-clip: padding-box;
+    border-bottom: none;
+    height: auto;
+}
+
+#extr-page-header-space {
+    line-height: normal;
+}
+
+    #extr-page-header-space > :first-child {
+        line-height: 4;
+    }
+
+#extr-page #main {
+    margin-top: 60px !important;
+}
+
+.smart-form fieldset {
+    padding: 5px 14px 5px;
+}
+
+.select-corrections > select {
+    padding: 0px 0px 0px 10px !important;
+    color: #767676 !important;
+}
+
+.confirm-policy > section {
+    margin-bottom: 0;
+}
+.confirm-policy > section > label{
+    margin-top: 7px;
+    margin-bottom: 7px!important;
+}
+
+#main {
+    padding-bottom: 0px;
+}
+
+#content .container-row {
+    margin-bottom: 0px;
+}
+
+.log-btns {
+    line-height: 49px !important;
+    color: #ffffff !important;
+    font-size: 18px !important;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+#extr-page-header-space > :first-child {
+   vertical-align: 0 !important; 
+}
+
+
+.menu-status-acces {
+    margin: 14px;
+    font-family: "Arial";
+    font-size: 14px !important;
+    color: #ffffff !important;
+}
+
+.margin-left-15 {
+    margin-left: 15px;
+}
+
+.margin-right-15 {
+    margin-right: 15px;
+}

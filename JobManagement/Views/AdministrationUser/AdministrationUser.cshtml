@@ -1,0 +1,32 @@
+﻿@using JobManagement.Resources;
+@model JobManagement.Models.Account.AdministrationUserViewModel
+
+<div class="col-md-12">
+    <div class="col-md-2 col-md-offset-5 profil-picture-border">
+        @Model.ProfileImage
+    </div>
+</div>
+<div class="col-md-12">
+    <hr class="horizontal-line">
+</div>
+<div class="col-md-12 text-align-center">
+    <div class="btn primary-active">@AccountResource.Information</div>
+</div>
+<div class="col-md-12">
+    <hr class="horizontal-line">
+</div>
+
+<div id="profile-container" class="col-md-12">
+    <div class="col-md-12">
+        <div class="col-md-6 profil-info-left-container">
+            <div class="col-md-12">
+                <label asp-for="Name"></label>
+            </div>
+        </div>
+        <div class="col-md-6 profil-info-right-container">
+            <div class="col-md-12">
+                <p>@Model.Name</p>
+            </div>
+        </div>
+    </div>
+</div>

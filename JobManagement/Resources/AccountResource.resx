@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdditionalDescription" xml:space="preserve">
+    <value>Допълнително описание</value>
+  </data>
+  <data name="Bachelor's degree" xml:space="preserve">
+    <value>Бакалавърска степен</value>
+  </data>
+  <data name="BdayDate" xml:space="preserve">
+    <value>Рожденна дата</value>
+  </data>
+  <data name="BG" xml:space="preserve">
+    <value>България</value>
+  </data>
+  <data name="Burgas" xml:space="preserve">
+    <value>Бургас</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Категории</value>
+  </data>
+  <data name="Choise" xml:space="preserve">
+    <value>Избери</value>
+  </data>
+  <data name="ChoiseFile" xml:space="preserve">
+    <value>избери файл</value>
+  </data>
+  <data name="ChoiseImage" xml:space="preserve">
+    <value>Добави снимки в галерията</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Държава</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Образование</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Имейл</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Жена</value>
+  </data>
+  <data name="GalleryPictures" xml:space="preserve">
+    <value>Снимки галерия</value>
+  </data>
+  <data name="GimnazeEducation" xml:space="preserve">
+    <value>Гимназиално образование</value>
+  </data>
+  <data name="HealthStatus" xml:space="preserve">
+    <value>Здравен статус</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Мъж</value>
+  </data>
+  <data name="MastersDegree" xml:space="preserve">
+    <value>Mагистърска степен</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Име</value>
+  </data>
+  <data name="NoResponce" xml:space="preserve">
+    <value>Предпочитам да не отговарям</value>
+  </data>
+  <data name="Ph.D" xml:space="preserve">
+    <value>Докторска степен</value>
+  </data>
+  <data name="PrimaryEducation" xml:space="preserve">
+    <value>Начално образование</value>
+  </data>
+  <data name="ProfilePicture" xml:space="preserve">
+    <value>Профилна снимка</value>
+  </data>
+  <data name="ProfileRedaction" xml:space="preserve">
+    <value>Редактиране на Моят профил</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Запази</value>
+  </data>
+  <data name="Secondaryeducat" xml:space="preserve">
+    <value>Средно образование</value>
+  </data>
+  <data name="Skills" xml:space="preserve">
+    <value>Умения</value>
+  </data>
+  <data name="Sofia" xml:space="preserve">
+    <value>София</value>
+  </data>
+  <data name="Sphere" xml:space="preserve">
+    <value>Посочете сферата, в която бихте искали да работите</value>
+  </data>
+  <data name="TelNumber" xml:space="preserve">
+    <value>Телефонен номер</value>
+  </data>
+  <data name="Town" xml:space="preserve">
+    <value>Град</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Вид</value>
+  </data>
+  <data name="Varna" xml:space="preserve">
+    <value>Варна</value>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>Видео</value>
+  </data>
+  <data name="VisibleProfile" xml:space="preserve">
+    <value>Искам профилът ми да бъде видим за фирмите.</value>
+  </data>
+  <data name="VocationalSchool/college" xml:space="preserve">
+    <value>Професионално училище/колеж</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Наименование</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="BusnessSector" xml:space="preserve">
+    <value>Бизнес сектор</value>
+  </data>
+  <data name="businessProfile" xml:space="preserve">
+    <value>Бизнес профил</value>
+  </data>
+  <data name="EnterEmailAddress" xml:space="preserve">
+    <value>Въведете имейл адреса си</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Забравена парола</value>
+  </data>
+  <data name="InstructionRessetPass" xml:space="preserve">
+    <value>Моля, проверете имейла си за получени указания как да промените паролата си.</value>
+  </data>
+  <data name="Irememberedmypass" xml:space="preserve">
+    <value>Спомних си паролата!</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Вход</value>
+  </data>
+  <data name="NotAccount" xml:space="preserve">
+    <value>Нямате акаунт? Регистрирайте се:</value>
+  </data>
+  <data name="PleaseEnterEmail" xml:space="preserve">
+    <value>Моля, въведете имейл адрес за възстановяване на паролата</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Нулиране на парола</value>
+  </data>
+  <data name="UserProfile" xml:space="preserve">
+    <value>Потребителски профил</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Парола</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Запомни ме</value>
+  </data>
+  <data name="ConformPassword" xml:space="preserve">
+    <value>Потвърдете паролата</value>
+  </data>
+  <data name="DontForgotPass" xml:space="preserve">
+    <value>Не забравяйте своята парола</value>
+  </data>
+  <data name="HaveAccount" xml:space="preserve">
+    <value>Имате акаунт? Влезте:</value>
+  </data>
+  <data name="Idegree" xml:space="preserve">
+    <value>Съгласен съм с</value>
+  </data>
+  <data name="JobType" xml:space="preserve">
+    <value>Вид работа</value>
+  </data>
+  <data name="PleaseEnterEmailonly" xml:space="preserve">
+    <value>Моля въведете имейл адрес</value>
+  </data>
+  <data name="RegisterYou" xml:space="preserve">
+    <value>Регистрирай се</value>
+  </data>
+  <data name="RegistrationToUserProfile" xml:space="preserve">
+    <value>Регистрация на Потребителски профил</value>
+  </data>
+  <data name="TermsOfUse" xml:space="preserve">
+    <value>Общите условия</value>
+  </data>
+  <data name="UserProfileDescriptionMsg" xml:space="preserve">
+    <value>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</value>
+  </data>
+  <data name="BusinessUserProfileDescriptionMsg" xml:space="preserve">
+    <value>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>Моля, въведете парола</value>
+  </data>
+  <data name="RegistrationToBusinessUserProfile" xml:space="preserve">
+    <value>Регистрация на Бизнес профил</value>
+  </data>
+  <data name="ResetPass" xml:space="preserve">
+    <value>Задаване на нова парола</value>
+  </data>
+  <data name="EnterEducation" xml:space="preserve">
+    <value>Моля изберете образование</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>Потребителят не е намерен</value>
+  </data>
+  <data name="BusinessSector" xml:space="preserve">
+    <value>Бизнес сектор</value>
+  </data>
+  <data name="NotAgreeWithGeneralTermsMsg" xml:space="preserve">
+    <value>За да се регестрирате трябва да сте съгласни с правилата на сайта!</value>
+  </data>
+  <data name="ForgotPasswordEmailMsg" xml:space="preserve">
+    <value>да се провери</value>
+  </data>
+  <data name="ForgotPasswordEmailSubject" xml:space="preserve">
+    <value>да се провери</value>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>Галерия</value>
+  </data>
+  <data name="GalleryImages" xml:space="preserve">
+    <value>Добавяне на снимки в моята галерия</value>
+  </data>
+  <data name="GalleryImagesBox" xml:space="preserve">
+    <value>Снимки в моята галерия</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Пол</value>
+  </data>
+</root>

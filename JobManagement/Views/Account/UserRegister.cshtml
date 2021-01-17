@@ -1,0 +1,166 @@
+@model JobManagement.Models.Account.RegistrationUserViewModel
+@using JobManagement.Resources;
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 padding-20">
+            <div class=" col-md-12">
+                <div class="col-md-10 col-md-offset-1">
+                    <h1 class="login-header-big txt-log-page-title">@AccountResource.HaveAccount</h1>
+
+                    <div class="col-md-6 col-md-offset-3">
+                        <img class="log-page-img" src="~/img/adminprofile111111.jpeg" />
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="log-page-txt">
+                        @AccountResource.UserProfileDescriptionMsg
+                    </p>
+                    <div class="note">
+                        <a class="type-profile" asp-controller="Account" asp-action="Login">@AccountResource.LogIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+            <div class="well no-padding register-form-border">
+
+                <form asp-controller="Account" asp-action="UserRegister" class="smart-form client-form">
+                    @Html.AntiForgeryToken()
+                    <header>
+                        @AccountResource.RegistrationToUserProfile
+                    </header>
+
+                    <fieldset>
+                        <section>
+                            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                        </section>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="input">
+                                    <input type="text" asp-for="Name" placeholder="@AccountResource.Name">
+                                    <span class="text-danger txt-small" asp-validation-for="Name"></span>
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="input">
+                                    <input type="text" asp-for="LastName" placeholder="@AccountResource.LastName">
+                                    <span class="text-danger txt-small" asp-validation-for="LastName"></span>
+                                </label>
+                            </section>
+                        </div>
+
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="select select-corrections">
+                                    <select asp-for="NGenderId" class="padding-bottom-0 padding-left-10"
+                                            asp-items="@Model.Genders">
+                                        <option selected="" disabled="">@AccountResource.Gender</option>
+                                    </select> <i></i>
+                                    <span class="text-danger txt-small" asp-validation-for="NGenderId"></span>
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <div class='input-group date bday-date' >
+                                            <input type='text' asp-for="BdayDate" class="form-control text-color-date bday-date" placeholder="@AccountResource.BdayDate" />
+                                            <span class="input-group-addon calendar-image">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="text-danger txt-small" asp-validation-for="BdayDate"></span>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="select select-corrections">
+                                    <select asp-for="NCountryId" class="padding-bottom-0 padding-left-10"
+                                            asp-items="@Model.Countries">
+                                        <option selected="" disabled="">@AccountResource.Country</option>
+                                    </select> <i></i>
+                                    <span class="text-danger txt-small" asp-validation-for="NCountryId"></span>
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="select select-corrections">
+                                    <select asp-for="NTownId" class="padding-bottom-0 padding-left-10"
+                                            asp-items="@Model.Towns">
+                                        <option selected="" disabled="">@AccountResource.Town</option>
+                                    </select> <i></i>
+                                    <span class="text-danger txt-small" asp-validation-for="NTownId"></span>
+                                </label>
+                            </section>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <section>
+                            <label class="input">
+                                <i class="icon-append fa fa-envelope"></i>
+                                <input type="email" asp-for="Email" placeholder="@AccountResource.Email">
+                                <b class="tooltip tooltip-bottom-right">@AccountResource.PleaseEnterEmailonly</b>
+                                <span class="text-danger txt-small" asp-validation-for="Email"></span>
+                            </label>
+                        </section>
+
+                        <section>
+                            <label class="input">
+                                <i class="icon-append fa fa-lock"></i>
+                                <input type="password" asp-for="Password" placeholder="@AccountResource.Password">
+                                <b class="tooltip tooltip-bottom-right">@AccountResource.DontForgotPass</b>
+                                <span class="text-danger txt-small" asp-validation-for="Password"></span>
+                            </label>
+                        </section>
+
+                        <section>
+                            <label class="input">
+                                <i class="icon-append fa fa-lock"></i>
+                                <input type="password" asp-for="ConfirmPassword" placeholder="@AccountResource.ConformPassword">
+                                <b class="tooltip tooltip-bottom-right">@AccountResource.DontForgotPass</b>
+                                <span class="text-danger txt-small" asp-validation-for="ConfirmPassword"></span>
+                            </label>
+                        </section>
+                    </fieldset>
+
+                    <fieldset class="confirm-policy">
+                        <section>
+                            <label class="checkbox">
+                                <input type="checkbox" asp-for="AgreeingGeneralTerms">
+                                <i></i>@AccountResource.Idegree<a href="#" data-toggle="modal" data-target="#myModal"> @AccountResource.TermsOfUse </a>
+                                <span class="text-danger txt-small" asp-validation-for="AgreeingGeneralTerms"></span>
+                            </label>
+                        </section>
+                    </fieldset>
+                    <footer>
+                        <button type="submit" class="btn btn-primary">
+                            @AccountResource.RegisterYou
+                        </button>
+                    </footer>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var $bdayDate = $('.bday-date');
+    var dateNow = new Date();
+    var maxDate = new Date(dateNow.setFullYear(dateNow.getFullYear() - 16));
+    var val = $("#BdayDate").val();
+    $bdayDate.datetimepicker({
+        format: 'L',
+        minDate: new Date(1920, 01, 01),
+        date: val,
+        locale: 'bg'
+    });
+    
+
+    $bdayDate.datetimepicker().on('dp.hide', function() {
+        $(this).blur();
+    });
+</script>

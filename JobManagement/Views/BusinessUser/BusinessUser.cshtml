@@ -1,0 +1,29 @@
+﻿<script src="~/js/CustomsScripts/Account/profile.js"></script>
+@using JobManagement.Resources;
+@model JobManagement.Models.BusinessUser.BusinessUserProfileViewModel
+
+<div class="col-md-12">
+    <div class="col-md-2 col-md-offset-5 profil-picture-border">
+        @if (Model.ProfileImageStr == null)
+        {
+            <img  class="profil-picture" alt="AJpG6gC3lXTlWOv3EQ4diq7a.jpg" src="~/img/user-profile-image.png" />
+        }
+        else
+        {
+            <img class="profil-picture" alt="AJpG6gC3lXTlWOv3EQ4diq7a.jpg" src="data:image/jpeg;base64,@Model.ProfileImageStr" />
+        }
+    </div>
+</div>
+<div class="col-md-12">
+    <hr class="horizontal-line">
+</div>
+<div class="col-md-12 text-align-center">
+    <div class="btn primary-active">@AccountResource.Information</div>
+</div>
+<div class="col-md-12">
+    <hr class="horizontal-line">
+</div>
+
+<div id="profile-container" class="col-md-12">
+    @{ await Html.RenderPartialAsync("_BusinessUserInformation", Model.BusinessUserInformationModel);}
+</div>

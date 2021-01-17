@@ -1,0 +1,36 @@
+﻿@using JobManagement.Resources;
+@model JobManagement.Models.Account.AdministrationUserViewModel
+
+<div class="container">
+    <div class="col-md-12">
+        <p class="txt-title-big text-align-center">@AccountResource.ProfileRedaction</p>
+
+        <form asp-controller="AdministrationUser" asp-action="AdministrationUserRedaction" class="smart-form profile-form-modify">
+            <fieldset>
+                <section>
+                    <label asp-for="Name" class="label txt-title-small"></label>
+                    <label class="input">
+                        <input asp-for="Name" class="txt-normal" type="text" maxlength="50">
+                        <span class="text-danger txt-small" asp-validation-for="Name"></span>
+                    </label>
+                </section>
+            </fieldset>
+           
+            <fieldset>
+                <section>
+                    <label asp-for="ProfileImage" class="label txt-title-small"></label>
+                    <label for="file" class="input input-file">
+                        <div class="button">
+                            <input asp-for="ProfileImage" type="file" name="file" onchange="this.parentNode.nextSibling.value = this.value">@AccountResource.Choise
+                        </div><input class="txt-normal" type="text" placeholder="@AccountResource.ChoiseFile" readonly="">
+                    </label>
+                </section>
+            </fieldset>
+            
+            <hr class="horizontal-line">
+            <div class="btn btn-primary pull-right btn-form-submit" type="submit">@AccountResource.Save</div>
+
+        </form>
+        <div class="empty-div-20px"></div>
+    </div>
+</div>

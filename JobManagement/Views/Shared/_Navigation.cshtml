@@ -1,0 +1,92 @@
+﻿@using JobManagement.Extensions
+@using JobManagement.Models.Enums
+@using JobManagement.Resources
+
+<aside id="left-panel">
+    <!-- BaseUser info -->
+    <div class="login-info">
+        <span>
+            <!-- BaseUser image size is adjusted inside CSS, it should stay as it -->
+            <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+                <img src="~/img/avatars/sunny.png" alt="me" class="online" />
+              
+                @*<span>@Model.Email</span>*@
+                <i class="fa fa-angle-down"></i>
+            </a>
+        </span>
+    </div>
+    <!-- end user info -->
+    <!-- NAVIGATION : This navigation is also responsive-->
+    <nav>
+        <!--
+        NOTE: Notice the gaps after each icon usage <i></i>..
+        Please note that these links work a bit different than
+        traditional href="" links. See documentation for details.
+        -->
+        <ul>
+            <li is-active-route asp-controller="Home" asp-action="Index">
+                <a asp-controller="Home" asp-action="Index" title="@NavigationResource.Home">
+                    <i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">@NavigationResource.Home</span>
+                </a>
+            </li>
+            @if (User.GetUserType() == UserTypeEnum.BusinessUser)
+            {
+                <li is-active-route asp-controller="FindEmployees" asp-action="FindEmployees">
+                    <a asp-controller="FindEmployees" asp-action="FindEmployees" title="@NavigationResource.FindEmployees">
+                        <i class="fa fa-search" aria-hidden="true"></i> <span class="menu-item-parent">@NavigationResource.FindEmployees</span>
+                    </a>
+                </li>
+            }
+
+            <li is-active-route asp-controller="News" asp-action="News">
+                <a asp-controller="News" asp-action="News" title="@NavigationResource.News">
+                    <i class="fas fa-newspaper"></i> <span class="menu-item-parent">@NavigationResource.News</span>
+                </a>
+            </li>
+
+            <li is-active-route asp-controller="Sucsseccfuls" asp-action="Sucsseccfuls">
+                <a asp-controller="Sucsseccfuls" asp-action="Sucsseccfuls" title="@NavigationResource.Sucsseccfuls">
+                    <i class="fa fa-star" aria-hidden="true"></i> <span class="menu-item-parent">@NavigationResource.Sucsseccfuls</span>
+                </a>
+            </li>
+            <li is-active-route asp-controller="Home" asp-action="AboutUs">
+                <a asp-controller="Home" asp-action="AboutUs" title="@NavigationResource.AboutUs">
+                    <i class="fa fa-users" aria-hidden="true"></i> <span class="menu-item-parent">@NavigationResource.AboutUs</span>
+                </a>
+            </li>
+
+            @if (User.GetUserType() == UserTypeEnum.AdministrationUser)
+            {
+                <li is-active-route asp-controller="Approval">
+                    <a href="#" title="@NavigationResource.Approval">
+                        <i class="fas fa-user-check"></i> <span class="menu-item-parent">@NavigationResource.Approval</span>
+                    </a>
+                    <ul>
+                        <li is-active-route asp-controller="Approval" asp-action="ApprovalUsers">
+                            <a asp-controller="Approval" asp-action="ApprovalUsers">@NavigationResource.Users</a>
+                        </li>
+                        <li is-active-route asp-controller="Approval" asp-action="ApprovalAnnouncements">
+                            <a asp-controller="Approval" asp-action="ApprovalAnnouncements">@NavigationResource.Ads</a>
+                        </li>
+                    </ul>
+                </li>
+            }
+
+            <li is-active-route asp-controller="Bazar" asp-action="Bazar">
+                <a asp-controller="Bazar" asp-action="Bazar" title="@NavigationResource.Bazaar">
+                    <i class="fa fa-lg fa-fw fa-shopping-cart"></i> <span class="menu-item-parent">@NavigationResource.Bazaar</span>
+                </a>
+            </li>
+
+            @if (User.GetUserType() == UserTypeEnum.User || User.GetUserType() == UserTypeEnum.BusinessUser)
+            {
+                <li is-active-route asp-controller="Announcements" asp-action="Announcements">
+                    <a asp-controller="Announcements" asp-action="Announcements" title="@NavigationResource.MyAds">
+                        <i class="fas fa-list-alt"></i> <span class="menu-item-parent">@NavigationResource.MyAds</span>
+                    </a>
+                </li>
+            }
+        </ul>
+    </nav>
+</aside>
+<!-- END NAVIGATION -->
